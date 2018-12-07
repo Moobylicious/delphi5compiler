@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>delphi5compiler</id>
+    <version>1.0.0.0</version>
+    <title>Delphi 5 Compiler</title>
+    <authors>Borland</authors>
+    <owners>Borland</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Delphi 5 compiler minimal binaries.  allows building of apps from command line.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 1999(ish) Borland?</copyright>
+    <tags>Delphi5</tags>
+  </metadata> 
+</package>
