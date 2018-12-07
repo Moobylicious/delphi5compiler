@@ -1,0 +1,187 @@
+[Repository Pages]
+Forms=
+Dialogs=
+Projects=
+Data Modules=  
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCANCL1]
+Type=FormTemplate
+Name=Standard Dialog
+Page=Dialogs
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCANCL1.ICO
+Description=OK, Cancel along bottom of dialog.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCNHLP1]
+Type=FormTemplate
+Name=Dialog with Help
+Page=Dialogs
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCNHLP1.ICO
+Description=OK, Cancel, Help along bottom of dialog. This is an Inherited Form.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCANCL1
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCANCL2]
+Type=FormTemplate
+Name=Standard Dialog
+Page=Dialogs
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCANCL2.ICO
+Description=OK, Cancel along right edge.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCNHLP2]
+Type=FormTemplate
+Name=Dialog with Help
+Page=Dialogs
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCNHLP2.ICO
+Description=OK, Cancel, Help along right edge. This is an Inherited Form.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\OKCANCL2
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\ABOUT]
+Type=FormTemplate
+Name=About box
+Page=Forms
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\ABOUT.ICO
+Description=Generic About box dialog.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\TABPGDLG]
+Type=FormTemplate
+Name=Tabbed pages
+Page=Forms
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\TABPGDLG.ICO
+Description=Generic tabbed pages dialog with OK, Cancel, and Help buttons.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\PASSWORD]
+Type=FormTemplate
+Name=Password Dialog
+Page=Dialogs
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\PASSWORD.ICO
+Description=Generic password entry form.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\DUALLIST]
+Type=FormTemplate
+Name=Dual list box
+Page=Forms
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\DUALLIST.ICO
+Description=Dialog box with two list boxes. Supports moving items from one list to the other.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\MDIAPP\MDIAPP]
+Type=ProjectTemplate
+Name=MDI Application
+Page=Projects
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\MDIAPP\MDIAPP.ICO
+Description=Standard MDI application frame.
+Author=Borland
+DefaultProject=0
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\SDIAPP\SDIAPP]
+Type=ProjectTemplate
+Name=SDI Application
+Page=Projects
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\SDIAPP\SDIAPP.ICO
+Description=Generic SDI style application.
+Author=Borland
+DefaultProject=0
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\LOGOAPP\LOGOAPP]
+Type=ProjectTemplate
+Name=Win95/98 Logo Application
+Page=Projects
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\LOGOAPP\LOGOAPP.ICO
+Description=Application that meets minimum Windows95/98 Logo requirements.
+Author=Borland
+DefaultProject=0
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\CUSTDATA]
+Type=FormTemplate
+Name=Customer Data
+Page=Data Modules
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\CUSTDATA.ICO
+Description=Data module that contains Customer Data Tables.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\  
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\DCDEMO]
+Type=FormTemplate
+Name=Decision Cube Sample
+Page=Business
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\DCDEMO.ICO
+Description=Decision Cube form.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\  
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\RECERROR]
+Type=FormTemplate
+Name=Reconcile Error Dialog
+Page=Dialogs
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\RECERROR.ICO
+Description=Reconcile Error Dialog.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\  
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\QRLIST]
+Type=FormTemplate
+Name=QuickReport List
+Page=Forms
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\QRLIST.ICO
+Description=QuickReport simple list type report.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\  
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\QRMD]
+Type=FormTemplate
+Name=Quick Report Master/Detail
+Page=Forms
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\QRMD.ICO
+Description=QuickReport Master/Detail form.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\  
+
+[C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\QRLABELS]
+Type=FormTemplate
+Name=QuickReport Labels
+Page=Forms
+Icon=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\QRLABELS.ICO
+Description=QuickReports mailing labels form.
+Author=Borland
+DefaultMainForm=0
+DefaultNewForm=0
+Ancestor=C:\DEV\PROGRAMS\DELPHI5\DELPHI5\OBJREPOS\  
+

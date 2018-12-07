@@ -1,0 +1,8 @@
+[Program]
+TREGSVR=c:\dev\programs\delphi5\Delphi5\bin\tregsvr.exe
+[Register]
+File1= -t C:\Windows\system32\STDOLE2.TLB
+File2=C:\Windows\system32\STDVCL32.DLL
+File3=C:\Windows\system32\STDVCL40.DLL
+File4=C:\Windows\system32\OLEAUT32.DLL
+File5="c:\dev\programs\delphi5\Borland Shared\Debugger\bordbk50.dll"

@@ -1,0 +1,36 @@
+
+module StdVCL
+{
+  
+  interface IProvider
+  {
+    any Get_Data();
+    any ApplyUpdates(in any Delta, in long MaxErrors, out long ErrorCount);
+    any GetMetaData();
+    any GetRecords(in long Count, out long RecsOut);
+    any DataRequest(in any Input);
+    boolean Get_Constraints();
+    boolean Set_Constraints();
+    void Reset(in boolean MetaData);
+    void SetParams(in any Values);
+  };
+  
+  interface IStrings
+  {
+    any Get_ControlDefault(in long Index);
+    any Set_ControlDefault(in long Index);
+    long Count();
+    any Get_Item(in long Index);
+    any Set_Item(in long Index);
+    void Remove(in long Index);
+    void Clear();
+    long Add(in any Item);
+    Object NewEnum();
+  };
+  
+  interface IDataBroker
+  {
+    any GetProviderNames();
+  };
+
+};
