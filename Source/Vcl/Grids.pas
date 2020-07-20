@@ -1620,7 +1620,8 @@ var
   FrameFlags1, FrameFlags2: DWORD;
 
   procedure DrawLines(DoHorz, DoVert: Boolean; Col, Row: Longint;
-    const CellBounds: array of Integer; OnColor, OffColor: TColor);
+    const CellBounds: array of Integer; OnColor, OffColor: TColor;
+    MaxArrayIndex: Integer);
 
   { Cellbounds is 4 integers: StartX, StartY, StopX, StopY
     Horizontal lines:  MajorIndex = 0
@@ -1637,6 +1638,7 @@ var
       Index: Integer;
       Points: PIntArray;
       StopMajor, StartMinor, StopMinor: Integer;
+      IndexCounter: Integer;        // Added by PP
     begin
       with Canvas, AxisInfo do
       begin
@@ -1663,6 +1665,7 @@ var
           StopMinor := CellBounds[2 + (MajorIndex xor 1)];
           StopMajor := CellBounds[2 + MajorIndex] + EffectiveLineWidth;
           Index := 0;
+          IndexCounter := 0;    // Added by PP
           repeat
             Points^[Index + MajorIndex] := Line;         { MoveTo }
             Points^[Index + (MajorIndex xor 1)] := StartMinor;
@@ -1673,7 +1676,9 @@ var
             Inc(Cell);
             // For hidden columns/rows, set extent to -EffectiveLineWidth
             Inc(Line, GetExtent(Cell) + EffectiveLineWidth);
-          until (Line > StopMajor) or (Cell > LastFullVisibleCell);
+            inc(IndexCounter);  // Added by PP
+          // Bug #3854: Ensure we do not overwrite the bounds of the passed arrays
+          until (Line > StopMajor) or (Cell > LastFullVisibleCell) or (IndexCounter >= MaxArrayIndex);
            { 2 integers per point, 2 points per line -> Index div 4 }
           PolyPolyLine(Canvas.Handle, Points^, StrokeList^, Index shr 2);
         end;
@@ -1811,17 +1816,28 @@ begin
       FillDWord(StrokeList^, MaxStroke, 2);
 
       if ColorToRGB(Color) = clSilver then LineColor := clGray;
+      // Bug #3854: Amended by PP to pass in the max. no. of elements that can
+      //            be stored in the PointsList and StokeList allocated above
       DrawLines(goFixedHorzLine in Options, goFixedVertLine in Options,
-        0, 0, [0, 0, Horz.FixedBoundary, Vert.FixedBoundary], clBlack, FixedColor);
+        0, 0, [0, 0, Horz.FixedBoundary, Vert.FixedBoundary], clBlack, FixedColor, MaxStroke);
+      // NOTES FROM PP - The call to DrawLines below is responsible for drawing the
+      //                 grid lines of the FIXED ROWS which exist over NON-FIXED COLS.
+      //                 When Bug #3854 occurs, it does so in here due to the repeat/until
+      //                 loop overwriting the bounds of the passed integer array.
+      //                 If my "fix" ddoesn't work, another "fix" that seemed to
+      //                 work for me was to skip the call below, but then of course
+      //                 ALL GRIDS then lose this additional grid line. Doesn't look
+      //                 totally odd as there are still lines, just not thicker ones
+      //                 to imply fix cells.
       DrawLines(goFixedHorzLine in Options, goFixedVertLine in Options,
         LeftCol, 0, [Horz.FixedBoundary, 0, Horz.GridBoundary,
-        Vert.FixedBoundary], clBlack, FixedColor);
+        Vert.FixedBoundary], clBlack, FixedColor, MaxStroke);
       DrawLines(goFixedHorzLine in Options, goFixedVertLine in Options,
         0, TopRow, [0, Vert.FixedBoundary, Horz.FixedBoundary,
-        Vert.GridBoundary], clBlack, FixedColor);
+        Vert.GridBoundary], clBlack, FixedColor, MaxStroke);
       DrawLines(goHorzLine in Options, goVertLine in Options, LeftCol,
         TopRow, [Horz.FixedBoundary, Vert.FixedBoundary, Horz.GridBoundary,
-        Vert.GridBoundary], LineColor, Color);
+        Vert.GridBoundary], LineColor, Color, MaxStroke);
 
       StackFree(StrokeList);
       StackFree(PointsList);
